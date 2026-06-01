@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estambul — Guía de viaje personalizada</title>
+  <style>
+    :root{
+      --navy:#0f2a3f;
+      --navy2:#173b57;
+      --gold:#c99b4a;
+      --sand:#f7efe3;
+      --paper:#fffaf2;
+      --ink:#23313b;
+      --muted:#6d7a82;
+      --line:#ead7bb;
+      --blue:#e9f3f8;
+      --green:#edf7f0;
+      --rose:#fff0ea;
+      --shadow:0 14px 35px rgba(15,42,63,.15);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:#e9e1d4;color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.45}
+    .page{width:210mm;min-height:297mm;margin:18px auto;background:var(--paper);box-shadow:var(--shadow);position:relative;overflow:hidden;padding:22mm}
+    .cover{padding:0;color:white;background:linear-gradient(135deg,rgba(15,42,63,.92),rgba(15,42,63,.62)),url('https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=1600&q=80') center/cover;display:flex;align-items:flex-end}
+    .cover-inner{width:100%;padding:32mm 24mm;background:linear-gradient(transparent,rgba(0,0,0,.35))}
+    .eyebrow{letter-spacing:.22em;text-transform:uppercase;font-size:12px;color:#f4d99e;font-family:Arial,sans-serif;font-weight:700}
+    h1{font-size:58px;margin:10px 0 4px;line-height:.95;letter-spacing:.02em;color:inherit}
+    .subtitle{font-size:22px;margin:0 0 22px;color:#fff4dc}
+    .cover-card{background:rgba(255,250,242,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(4px);padding:18px;border-radius:22px;max-width:520px;font-family:Arial,sans-serif}
+    h2{font-size:34px;color:var(--navy);margin:0 0 12px;line-height:1.05}
+    h3{font-size:22px;color:var(--navy2);margin:26px 0 10px}
+    h4{font-size:18px;color:var(--navy);margin:0 0 6px;font-family:Arial,sans-serif}
+    p{margin:0 0 10px}.sans{font-family:Arial,sans-serif}.muted{color:var(--muted)}
+    .topbar{display:flex;align-items:center;gap:12px;margin-bottom:22px;border-bottom:2px solid var(--line);padding-bottom:12px}
+    .badge{font-family:Arial,sans-serif;background:var(--navy);color:white;border-radius:999px;padding:7px 12px;font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+    .gold{color:var(--gold)}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .card{background:white;border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:0 8px 18px rgba(15,42,63,.05)}
+    .card.blue{background:var(--blue)}.card.green{background:var(--green)}.card.rose{background:var(--rose)}
+    .icon-title{display:flex;gap:10px;align-items:center;font-family:Arial,sans-serif;font-weight:800;color:var(--navy);font-size:17px;margin-bottom:8px}
+    .icon{width:34px;height:34px;border-radius:12px;background:var(--navy);color:white;display:inline-flex;align-items:center;justify-content:center;font-size:18px;flex:0 0 34px}
+    .mini{font-size:13px;font-family:Arial,sans-serif;color:var(--muted)}
+    .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0}.fact{background:#fff;border:1px solid var(--line);border-radius:14px;padding:9px;font-family:Arial,sans-serif;font-size:12px}.fact b{display:block;color:var(--navy);font-size:13px;margin-bottom:2px}
+    .route{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 16px}.step{font-family:Arial,sans-serif;background:var(--navy);color:white;border-radius:999px;padding:8px 11px;font-size:12px}.arrow{color:var(--gold);align-self:center;font-weight:900}
+    .highlight{border-left:5px solid var(--gold);background:#fff6e8;border-radius:16px;padding:14px;margin:14px 0;font-family:Arial,sans-serif}
+    .list{padding-left:18px;margin:8px 0;font-family:Arial,sans-serif}.list li{margin:5px 0}
+    .place{break-inside:avoid;margin:14px 0}.place-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:10px}.pill{font-family:Arial,sans-serif;font-size:12px;border:1px solid var(--gold);color:var(--navy);padding:4px 9px;border-radius:999px;background:#fff8ea;white-space:nowrap}
+    .link-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.link{font-family:Arial,sans-serif;font-size:12px;border-radius:999px;padding:6px 10px;background:var(--navy);color:white;text-decoration:none}.link.alt{background:var(--gold);color:#281b09}
+    .photo{height:130px;border-radius:18px;background:linear-gradient(135deg,rgba(15,42,63,.15),rgba(201,155,74,.15)),url('https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=1200&q=80') center/cover;margin:10px 0}.photo.ortakoy{background-image:linear-gradient(135deg,rgba(15,42,63,.18),rgba(201,155,74,.10)),url('https://images.unsplash.com/photo-1564577160324-112d603f750f?auto=format&fit=crop&w=1200&q=80')}.photo.bosphorus{background-image:linear-gradient(135deg,rgba(15,42,63,.18),rgba(201,155,74,.10)),url('https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=1200&q=80')}
+    .map{background:#f5ead8;border:1px dashed var(--gold);border-radius:22px;padding:14px;margin:14px 0;font-family:Arial,sans-serif}.map-line{display:flex;align-items:center;justify-content:space-between;gap:7px}.dot{width:17px;height:17px;border-radius:50%;background:var(--gold);border:4px solid white;box-shadow:0 0 0 1px var(--gold)}.map-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--navy);margin-top:7px;text-align:center;gap:4px}
+    .check{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}.check div{font-family:Arial,sans-serif;border:1px solid var(--line);background:white;border-radius:14px;padding:9px;font-size:13px}
+    .notes{height:19px;border-bottom:1px solid #d8c3a1;margin:9px 0}.footer{position:absolute;bottom:11mm;left:22mm;right:22mm;font-family:Arial,sans-serif;font-size:11px;color:#8a7b66;display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:8px}
+    @media print{body{background:white}.page{margin:0;box-shadow:none;page-break-after:always}.link{color:white!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+  </style>
+</head>
+<body>
+  <section class="page cover">
+    <div class="cover-inner">
+      <div class="eyebrow">Guía de viaje personalizada</div>
+      <h1>ESTAMBUL</h1>
+      <p class="subtitle">Rutas, transporte, restaurantes y consejos prácticos</p>
+      <div class="cover-card">Una guía bonita y fácil de seguir, pensada para disfrutar la ciudad sin perder la información útil: tiempos, costes, comodidad, observaciones y enlaces editables.</div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="topbar"><span class="badge">Antes de empezar</span><span class="sans muted">Días 5, 6 y 7</span></div>
+    <h2>Cómo usar esta guía</h2>
+    <p class="sans">Cada parada está resumida en formato ficha para poder consultarla rápido desde el móvil. Los enlaces aparecen como espacios editables para que puedas sustituirlos por Google Maps, webs oficiales o contactos.</p>
+    <div class="grid3">
+      <div class="card"><div class="icon-title"><span class="icon">📍</span>Ubicación</div><p class="mini">Zona o dirección clave.</p></div>
+      <div class="card"><div class="icon-title"><span class="icon">⏰</span>Horario</div><p class="mini">Horas orientativas o recomendadas.</p></div>
+      <div class="card"><div class="icon-title"><span class="icon">💰</span>Coste</div><p class="mini">Gratis, bajo, medio o precio aproximado.</p></div>
+      <div class="card"><div class="icon-title"><span class="icon">🚇</span>Transporte</div><p class="mini">Cómo llegar sin complicarse.</p></div>
+      <div class="card"><div class="icon-title"><span class="icon">🚶</span>Comodidad</div><p class="mini">Fácil, media o intensa.</p></div>
+      <div class="card"><div class="icon-title"><span class="icon">⚠️</span>Observaciones</div><p class="mini">Consejos que evitan sustos.</p></div>
+    </div>
+    <h3>Vista general del itinerario</h3>
+    <div class="grid3">
+      <div class="card blue"><h4>Día 5</h4><p class="sans"><b>Eyüp Sultan, Karaköy y Taksim</b></p><p class="mini">Cultural, histórico y con vistas.</p></div>
+      <div class="card green"><h4>Día 6</h4><p class="sans"><b>Ortaköy y Palacio Beylerbeyi</b></p><p class="mini">Bósforo, fotos y palacio.</p></div>
+      <div class="card rose"><h4>Día 7</h4><p class="sans"><b>Día libre y salida a Sofía</b></p><p class="mini">Compras, calma y tren.</p></div>
+    </div>
+    <div class="highlight"><b>Consejo de oro:</b> en Estambul conviene llevar batería externa, algo de efectivo, pañuelo para mezquitas y la Istanbulkart lista para evitar perder tiempo.</div>
+    <div class="footer"><span>ESTAMBUL · Guía personalizada</span><span>2</span></div>
+  </section>
+
+  <section class="page">
+    <div class="topbar"><span class="badge">Día 5</span><span class="sans muted">Eyüp Sultan · Karaköy · Taksim</span></div>
+    <h2>Día 5 — Cultura, barrios y mirador</h2>
+    <p class="sans">Día cultural e histórico con mezquitas emblemáticas, ambiente urbano, una subida panorámica a Pierre Loti y cena en Karaköy.</p>
+    <div class="facts"><div class="fact"><b>Duración</b>Día completo</div><div class="fact"><b>Coste</b>Bajo-medio</div><div class="fact"><b>Comodidad</b>Media</div><div class="fact"><b>Mejor momento</b>Atardecer en Pierre Loti</div></div>
+    <div class="route"><span class="step">Taksim / Istiklal</span><span class="arrow">→</span><span class="step">Karaköy</span><span class="arrow">→</span><span class="step">Kılıç Ali Paşa</span><span class="arrow">→</span><span class="step">Eminönü</span><span class="arrow">→</span><span class="step">Eyüp Sultan</span><span class="arrow">→</span><span class="step">Pierre Loti</span></div>
+    <div class="map"><b>Mapa visual simplificado</b><div class="map-line"><span class="dot"></span><hr style="flex:1;border:none;border-top:2px solid #d8b16a"><span class="dot"></span><hr style="flex:1;border:none;border-top:2px solid #d8b16a"><span class="dot"></span><hr style="flex:1;border:none;border-top:2px solid #d8b16a"><span class="dot"></span><hr style="flex:1;border:none;border-top:2px solid #d8b16a"><span class="dot"></span></div><div class="map-labels"><span>Taksim</span><span>Karaköy</span><span>Eminönü</span><span>Eyüp</span><span>Pierre Loti</span></div></div>
+    <div class="photo"></div>
+    <div class="grid">
+      <div class="card place"><div class="place-head"><h4>🍳 Desayuno en Taksim / Istiklal</h4><span class="pill">45-60 min</span></div><p class="sans"><b>Coste:</b> medio · <b>Comodidad:</b> fácil.</p><p class="mini">Zona práctica para empezar el día, comprar algo rápido o ajustar el plan antes de moverse.</p></div>
+      <div class="card place"><div class="place-head"><h4>💱 Cambio de dinero</h4><span class="pill">10-20 min</span></div><p class="sans"><b>Coste:</b> sin entrada · <b>Comodidad:</b> fácil.</p><p class="mini">Comparar el cambio antes de decidir y evitar comisiones altas en zonas demasiado turísticas.</p></div>
+    </div>
+    <div class="footer"><span>ESTAMBUL · Guía personalizada</span><span>3</span></div>
+  </section>
+
+  <section class="page">
+    <div class="topbar"><span class="badge">Día 5</span><span class="sans muted">Fichas útiles</span></div>
+    <h2>Paradas imprescindibles</h2>
+    <div class="card place">
+      <div class="place-head"><h4>🕌 Mezquita Kılıç Ali Paşa</h4><span class="pill">Karaköy / Beyoğlu</span></div>
+      <div class="facts"><div class="fact"><b>Entrada</b>Gratis</div><div class="fact"><b>Horario</b>09:00-18:00 orientativo</div><div class="fact"><b>Tiempo</b>30-45 min</div><div class="fact"><b>Comodidad</b>Fácil</div></div>
+      <p class="sans"><b>Dirección:</b> Kılıç Ali Paşa Caddesi No:1, Beyoğlu.</p>
+      <p class="sans"><b>Observaciones:</b> ropa respetuosa; puede cerrar durante la oración.</p>
+      <p class="sans"><b>Curiosidad:</b> obra de Mimar Sinan e inspirada en Santa Sofía.</p>
+      <div class="link-row"><a class="link" href="#">[Google Maps]</a><a class="link alt" href="#">[Web oficial]</a><a class="link" href="#">[Contacto]</a></div>
+    </div>
+    <div class="card place">
+      <div class="place-head"><h4>🕌 Mezquita Eyüp Sultan</h4><span class="pill">Eyüp</span></div>
+      <div class="facts"><div class="fact"><b>Entrada</b>Gratis</div><div class="fact"><b>Tiempo</b>45-60 min</div><div class="fact"><b>Comodidad</b>Media</div><div class="fact"><b>Consejo</b>Evitar oración</div></div>
+      <p class="sans">Lugar de gran importancia religiosa. Conviene visitarlo con calma, vestir con respeto y comprobar horarios antes de entrar.</p>
+      <div class="link-row"><a class="link" href="#">[Google Maps]</a><a class="link alt" href="#">[Web oficial]</a></div>
+    </div>
+    <div class="card place">
+      <div class="place-head"><h4>🌄 Mirador Pierre Loti</h4><span class="pill">Atardecer recomendado</span></div>
+      <div class="facts"><div class="fact"><b>Tiempo</b>60-90 min</div><div class="fact"><b>Coste</b>Bajo / consumición</div><div class="fact"><b>Comodidad</b>Media</div><div class="fact"><b>Foto</b>Té con vistas</div></div>
+      <p class="sans"><b>Cómo llegar:</b> teleférico o caminando desde Eyüp.</p><p class="sans"><b>Observación:</b> vistas preciosas del Cuerno de Oro; mejor si se llega sin prisas.</p>
+      <div class="link-row"><a class="link" href="#">[Google Maps]</a></div>
+    </div>
+    <div class="highlight"><b>Para comer o parar:</b> Karaköy Lokantası, Karaköy Güllüoğlu para baklava, zona Eminönü para algo rápido, Çınaraltı Çay Bahçesi si encaja por ruta.</div>
+    <div class="check"><div>☐ Efectivo</div><div>☐ Pañuelo / ropa adecuada</div><div>☐ Batería móvil</div><div>☐ Istanbulkart / ferris revisados</div></div>
+    <div class="footer"><span>ESTAMBUL · Guía personalizada</span><span>4</span></div>
+  </section>
+
+  <section class="page">
+    <div class="topbar"><span class="badge">Día 6</span><span class="sans muted">Ortaköy · Beylerbeyi · Bósforo</span></div>
+    <h2>Día 6 — Bósforo, fotos y palacio</h2>
+    <p class="sans">Día más relajado junto al Bósforo, con una de las zonas más fotogénicas de Estambul y visita al Palacio Beylerbeyi.</p>
+    <div class="facts"><div class="fact"><b>Duración</b>Día completo flexible</div><div class="fact"><b>Coste</b>Medio</div><div class="fact"><b>Comodidad</b>Fácil-media</div><div class="fact"><b>Mejor foto</b>Ortaköy + puente</div></div>
+    <div class="route"><span class="step">Desayuno Ortaköy</span><span class="arrow">→</span><span class="step">Mezquita</span><span class="arrow">→</span><span class="step">Paseo Bósforo</span><span class="arrow">→</span><span class="step">Beylerbeyi</span><span class="arrow">→</span><span class="step">Cena / Ferry nocturno</span></div>
+    <div class="map"><b>Mapa visual simplificado</b><div class="map-line"><span class="dot"></span><hr style="flex:1;border:none;border-top:2px solid #d8b16a"><span class="dot"></span><hr style="flex:1;border:none;border-top:2px solid #d8b16a"><span class="dot"></span><hr style="flex:1;border:none;border-top:2px solid #d8b16a"><span class="dot"></span></div><div class="map-labels"><span>Ortaköy</span><span>Puente</span><span>Beylerbeyi</span><span>Ferry / Cena</span></div></div>
+    <div class="photo ortakoy"></div>
+    <div class="card place"><div class="place-head"><h4>🍳 Desayuno en Ortaköy</h4><span class="pill">60 min</span></div><p class="sans"><b>Coste:</b> medio-alto · <b>Comodidad:</b> fácil.</p><p class="mini">Recomendación del plan: Ortaköy Van Kahvalti Salonu si apetece desayuno turco.</p></div>
+    <div class="card place"><div class="place-head"><h4>🕌 Mezquita de Ortaköy</h4><span class="pill">Foto icónica</span></div><div class="facts"><div class="fact"><b>Entrada</b>Gratis</div><div class="fact"><b>Tiempo</b>30-45 min</div><div class="fact"><b>Comodidad</b>Fácil</div><div class="fact"><b>Consejo</b>Fuera de oración</div></div><p class="sans">Punto fotográfico precioso con el puente del Bósforo de fondo. Merece la pena dedicarle unos minutos sin prisa.</p><div class="link-row"><a class="link" href="#">[Google Maps]</a></div></div>
+    <div class="footer"><span>ESTAMBUL · Guía personalizada</span><span>5</span></div>
+  </section>
+
+  <section class="page">
+    <div class="topbar"><span class="badge">Día 6</span><span class="sans muted">Palacio y noche</span></div>
+    <h2>Palacio Beylerbeyi y plan nocturno</h2>
+    <div class="card place">
+      <div class="place-head"><h4>🏛️ Palacio Beylerbeyi</h4><span class="pill">Residencia otomana</span></div>
+      <div class="facts"><div class="fact"><b>Entrada</b>600 TL orientativo</div><div class="fact"><b>Jardines</b>50 TL orientativo</div><div class="fact"><b>Taquilla</b>09:00-17:00 orientativo</div><div class="fact"><b>Tiempo</b>1,5-2 h</div></div>
+      <p class="sans"><b>Cómo llegar desde Ortaköy:</b> autobús 15, ferry o taxi según disponibilidad y cansancio.</p>
+      <p class="sans"><b>Observaciones:</b> revisar cierre semanal, precio actualizado y entrada antes de ir. Es una visita perfecta para conocer el lado más palaciego del Bósforo.</p>
+      <div class="link-row"><a class="link" href="#">[Google Maps]</a><a class="link alt" href="#">[Web oficial]</a><a class="link" href="#">[Contacto]</a></div>
+    </div>
+    <div class="grid">
+      <div class="card blue"><div class="icon-title"><span class="icon">🌙</span>Plan nocturno</div><p class="sans">Ferry nocturno por el Bósforo o cena con vistas. Reservar si se busca un restaurante especial.</p></div>
+      <div class="card green"><div class="icon-title"><span class="icon">☕</span>Paradas bonitas</div><p class="sans">Feriye Lokantası, The House Cafe, Ekşi Limon o un café sencillo con vistas al puente.</p></div>
+    </div>
+    <div class="highlight"><b>Restaurantes y cafés del día:</b> Balkan Halk Lokantası, Zemheri, Konyalı Ferdi Usta, Feriye Lokantası, The House Cafe, Ekşi Limon.</div>
+    <div class="check"><div>☐ Entradas del palacio revisadas</div><div>☐ Batería para fotos</div><div>☐ Chaqueta ligera para ferry</div><div>☐ Último transporte confirmado</div></div>
+    <div class="footer"><span>ESTAMBUL · Guía personalizada</span><span>6</span></div>
+  </section>
+
+  <section class="page">
+    <div class="topbar"><span class="badge">Día 7</span><span class="sans muted">Día libre · salida a Sofía</span></div>
+    <h2>Día 7 — Cierre tranquilo y tren</h2>
+    <p class="sans">Día flexible para compras, repetir algún rincón favorito y preparar la salida hacia Sofía sin agobios.</p>
+    <div class="photo bosphorus"></div>
+    <div class="facts"><div class="fact"><b>Duración</b>Flexible</div><div class="fact"><b>Coste</b>Variable</div><div class="fact"><b>Comodidad</b>Fácil-media</div><div class="fact"><b>Clave</b>Llegar con margen</div></div>
+    <div class="grid">
+      <div class="card place"><div class="place-head"><h4>🛍️ Mañana libre</h4><span class="pill">Flexible</span></div><p class="sans">Ideas: repetir zona favorita, compras de última hora, dulces, café turco o souvenirs.</p></div>
+      <div class="card place"><div class="place-head"><h4>🎒 Preparar equipaje</h4><span class="pill">Sin prisas</span></div><p class="sans">Revisar documentación, billete de tren, cargadores, efectivo, comida y agua para el trayecto.</p></div>
+    </div>
+    <div class="card place"><div class="place-head"><h4>🚆 Salida a Sofía</h4><span class="pill">Llegar con margen</span></div><p class="sans"><b>Observación:</b> confirmar estación, hora exacta, plataforma, requisitos y billete antes de salir del alojamiento.</p><div class="link-row"><a class="link" href="#">[Billete tren]</a><a class="link alt" href="#">[Google Maps estación]</a><a class="link" href="#">[Alojamiento Sofía]</a></div></div>
+    <div class="check"><div>☐ Billete de tren</div><div>☐ Documentación</div><div>☐ Cargador / batería</div><div>☐ Agua y snacks</div><div>☐ Efectivo</div><div>☐ Alojamiento de Sofía confirmado</div></div>
+    <div class="footer"><span>ESTAMBUL · Guía personalizada</span><span>7</span></div>
+  </section>
+
+  <section class="page">
+    <div class="topbar"><span class="badge">Extras útiles</span><span class="sans muted">Transporte · consejos · notas</span></div>
+    <h2>Transporte y consejos rápidos</h2>
+    <div class="grid">
+      <div class="card blue"><div class="icon-title"><span class="icon">🚇</span>Transporte útil</div><ul class="list"><li>Istanbulkart preparada.</li><li>Tranvía T1 para zonas históricas.</li><li>Ferries para moverse bonito y descansar.</li><li>Funicular si evita subidas.</li><li>Taxi o app como opción cómoda cuando haya cansancio.</li></ul></div>
+      <div class="card green"><div class="icon-title"><span class="icon">⚠️</span>Consejos prácticos</div><ul class="list"><li>Revisar horarios de oración antes de mezquitas.</li><li>Llevar pañuelo o ropa adecuada.</li><li>Guardar batería para mapas y fotos.</li><li>Reservar si la cena es especial.</li><li>Evitar ir justa al tren.</li></ul></div>
+    </div>
+    <h3>Espacio para enlaces importantes</h3>
+    <div class="card"><p class="sans"><b>Google Maps Día 5:</b> ________________________________________________</p><p class="sans"><b>Google Maps Día 6:</b> ________________________________________________</p><p class="sans"><b>Estación / tren Sofía:</b> ______________________________________________</p><p class="sans"><b>Contacto alojamiento:</b> ______________________________________________</p></div>
+    <h3>Notas personales</h3>
+    <div class="notes"></div><div class="notes"></div><div class="notes"></div><div class="notes"></div><div class="notes"></div><div class="notes"></div><div class="notes"></div><div class="notes"></div>
+    <div class="footer"><span>ESTAMBUL · Guía personalizada</span><span>8</span></div>
+  </section>
+</body>
+</html>
